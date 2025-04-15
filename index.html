@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Figma Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .navbar {
+  background: #ffc700;
+}
+
+
+
+
+.category-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+
+.category-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.category-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  font-size: 0.80rem;
+  color: #555;
+}
+.category-card img:hover {
+  transform: translateY(-5px);
+} 
+
+
+
+.carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      max-width: 100vw;
+      background: #ffc700;
+
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s linear;
+      gap: 3%;
+  
+    }
+    .carousel-item {
+      min-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 10;
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+    }
+    .arrow.left {
+      left: 10px;
+    }
+    .arrow.right {
+      right: 10px;
+    }
+
+
+    .text{
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      line-height: 1.6;
+      padding: 50px;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+
+    .emoji {
+      font-size: 24px;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+
+    .color-purple { color: #a78bfa; }
+    .color-red { color: #ef4444; }
+    .color-green { color: #10b981; }
+    .color-yellow { color: #facc15; }
+    .color-blue { color: #6366f1; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><button>SHOP</button></a>
+      <button>ABOUT</button>
+      <!-- <input type="search"> -->
+      <span class="search-icon">🔍</span>
+    </div>
+    <h1>THE FIGMA STORE</h1>
+    <div class="nav-right">
+      <button>
+        <select name="country" id="country-select">
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <option value="IN">India</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="JP">Japan</option>
+          <option value="CN">China</option>
+          <option value="BR">Brazil</option>
+          <option value="ZA">South Africa</option>
+          <option value="IT">Italy</option>
+          <option value="ES">Spain</option>
+          <option value="MX">Mexico</option>
+          <option value="RU">Russia</option>
+        </select>
+      </button>
+      
+      <button>CART 🛒 0</button>
+    </div>  
+  </header>
+
+
+
+
+  <!-- Featured Images -->
+  <div class="carousel-container">
+    <button class="arrow left">&#10094;</button>
+    <div class="carousel-track" id="carouselTrack">
+  
+
+        <!-- First SVG -->
+        <div style="position: relative; width: 650px; height: 648px;">
+          <svg width="650" height="648" viewBox="0 0 650 648" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="d4d5c9a0-d644-47ad-bcd6-c6bd7f56cb16" x1="0" y1="0" x2="650" y2="648" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7E5F" />
+                <stop offset="1" stop-color="#FEB47B" />
+              </linearGradient>
+        
+              <!-- Clip path using the custom shape -->
+              <clipPath id="clip-shape-2">
+                <path d="M648 4.22453L648 643.684C648 644.463 647.15 644.943 646.483 644.54L645.449 646.252L646.483 644.54L449.926 525.864C447.953 524.673 445.42 524.985 443.795 526.62L325.709 645.449C325.318 645.842 324.682 645.842 324.291 645.449L206.205 526.62C204.58 524.985 202.047 524.673 200.074 525.864L3.51682 644.54C2.85037 644.943 1.99997 644.463 1.99997 643.684L2 4.22451C2 3.4526 2.83746 2.97177 3.50403 3.36084L4.51221 1.63352L3.50409 3.36084L200.147 118.131C202.087 119.264 204.544 118.963 206.154 117.397L324.303 2.46841C324.691 2.09081 325.309 2.09082 325.697 2.46841L443.846 117.397C445.456 118.963 447.913 119.264 449.853 118.131L646.496 3.36087C647.163 2.97178 648 3.45263 648 4.22453Z" />
+              </clipPath>
+            </defs>
+        
+            <!-- Background shape with gradient -->
+            <path d="M648 4.22453L648 643.684C648 644.463 647.15 644.943 646.483 644.54L645.449 646.252L646.483 644.54L449.926 525.864C447.953 524.673 445.42 524.985 443.795 526.62L325.709 645.449C325.318 645.842 324.682 645.842 324.291 645.449L206.205 526.62C204.58 524.985 202.047 524.673 200.074 525.864L3.51682 644.54C2.85037 644.943 1.99997 644.463 1.99997 643.684L2 4.22451C2 3.4526 2.83746 2.97177 3.50403 3.36084L4.51221 1.63352L3.50409 3.36084L200.147 118.131C202.087 119.264 204.544 118.963 206.154 117.397L324.303 2.46841C324.691 2.09081 325.309 2.09082 325.697 2.46841L443.846 117.397C445.456 118.963 447.913 119.264 449.853 118.131L646.496 3.36087C647.163 2.97178 648 3.45263 648 4.22453Z"
+              fill="url(#d4d5c9a0-d644-47ad-bcd6-c6bd7f56cb16)" />
+        
+            <!-- Clipped image -->
+            
+              <image
+              href= "https://store.figma.com/cdn/shop/products/figma-store_framework-tee_01_1000x.jpg?v=1670515454"
+              width="650"
+              height="648"
+              clip-path="url(#clip-shape-2)"
+              preserveAspectRatio="xMidYMid slice" />
+            
+          </svg>
+        </div>
+        
+        <!-- Second SVG -->
+        <div style="position: relative; width: 650px; height: 650px;">
+          <svg width="650" height="650" viewBox="0 0 650 650" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="location-selector-cutout" x1="0" y1="0" x2="650" y2="650" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7E5F" />
+                <stop offset="1" stop-color="#FEB47B" />
+              </linearGradient>
+              
+              <!-- Clip path using the same shape -->
+              <clipPath id="clip-shape">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M650 0H0V125.496C0 231.179 81.9707 317.718 185.802 325C81.9707 332.282 0 418.821 0 524.504V650H650V524.504C650 418.82 568.029 332.282 464.198 325C568.029 317.718 650 231.179 650 125.496V0Z"/>
+              </clipPath>
+            </defs>
+        
+            <!-- Gradient background -->
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M650 0H0V125.496C0 231.179 81.9707 317.718 185.802 325C81.9707 332.282 0 418.821 0 524.504V650H650V524.504C650 418.82 568.029 332.282 464.198 325C568.029 317.718 650 231.179 650 125.496V0Z"
+              fill="url(#location-selector-cutout)" />
+        
+            <!-- Clipped image -->
+            <image
+            href="https://store.figma.com/cdn/shop/products/Figma-Store---Product-4381_1000x.jpg?v=1636323317"
+            width="650"
+            height="650"
+            clip-path="url(#clip-shape)"
+            preserveAspectRatio="xMidYMid slice" />
+          </svg>
+        </div>
+
+
+
+        
+
+        <!-- Third SVG -->
+        <div style="position: relative; width: 1124px; height: 612px;">
+          <svg width="1124" height="612" viewBox="0 0 1124 612" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="9ec3ec12-3d86-4315-b660-2cbee1cedb72" x1="0" y1="0" x2="1124" y2="612" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7E5F" />
+                <stop offset="1" stop-color="#FEB47B" />
+              </linearGradient>
+        
+              <!-- Clip path for the unique shape -->
+              <clipPath id="clip-shape-3">
+                <path d="M302.279 498.312L300 493.256L297.721 498.312C266.868 566.765 220.337 609.5 169 609.5C123.66 609.5 82.0782 576.193 51.6874 521.166C21.3451 466.227 2.5 390.159 2.5 306C2.5 221.841 21.3451 145.773 51.6874 90.834C82.0782 35.8068 123.66 2.5 169 2.5C220.337 2.5 266.868 45.2351 297.721 113.688L300 118.744L302.279 113.688C333.132 45.2351 379.663 2.5 431 2.5C482.337 2.5 528.868 45.2351 559.721 113.688L562 118.744L564.279 113.688C595.132 45.2351 641.663 2.5 693 2.5C744.337 2.5 790.868 45.2351 821.721 113.688L824 118.744L826.279 113.688C857.132 45.2351 903.663 2.5 955 2.5C1000.34 2.5 1041.92 35.8068 1072.31 90.834C1102.65 145.773 1121.5 221.841 1121.5 306C1121.5 390.159 1102.65 466.227 1072.31 521.166C1041.92 576.193 1000.34 609.5 955 609.5C903.663 609.5 857.132 566.765 826.279 498.312L824 493.256L821.721 498.312C790.868 566.765 744.337 609.5 693 609.5C641.663 609.5 595.132 566.765 564.279 498.312L562 493.256L559.721 498.312C528.868 566.765 482.337 609.5 431 609.5C379.663 609.5 333.132 566.765 302.279 498.312Z" />
+              </clipPath>
+            </defs>
+        
+            <!-- Background gradient shape -->
+            <path d="M302.279 498.312L300 493.256L297.721 498.312C266.868 566.765 220.337 609.5 169 609.5C123.66 609.5 82.0782 576.193 51.6874 521.166C21.3451 466.227 2.5 390.159 2.5 306C2.5 221.841 21.3451 145.773 51.6874 90.834C82.0782 35.8068 123.66 2.5 169 2.5C220.337 2.5 266.868 45.2351 297.721 113.688L300 118.744L302.279 113.688C333.132 45.2351 379.663 2.5 431 2.5C482.337 2.5 528.868 45.2351 559.721 113.688L562 118.744L564.279 113.688C595.132 45.2351 641.663 2.5 693 2.5C744.337 2.5 790.868 45.2351 821.721 113.688L824 118.744L826.279 113.688C857.132 45.2351 903.663 2.5 955 2.5C1000.34 2.5 1041.92 35.8068 1072.31 90.834C1102.65 145.773 1121.5 221.841 1121.5 306C1121.5 390.159 1102.65 466.227 1072.31 521.166C1041.92 576.193 1000.34 609.5 955 609.5C903.663 609.5 857.132 566.765 826.279 498.312L824 493.256L821.721 498.312C790.868 566.765 744.337 609.5 693 609.5C641.663 609.5 595.132 566.765 564.279 498.312L562 493.256L559.721 498.312C528.868 566.765 482.337 609.5 431 609.5C379.663 609.5 333.132 566.765 302.279 498.312Z"
+              fill="url(#9ec3ec12-3d86-4315-b660-2cbee1cedb72)" />
+        
+            <!-- Clipped image -->
+              <image
+              href= "https://store.figma.com/cdn/shop/products/figma-store_tool-kit-mug_02_1000x.jpg?v=1670520015"
+              width="1124"
+              height="612"
+              clip-path="url(#clip-shape-3)"
+              preserveAspectRatio="xMidYMid slice" />
+          </svg>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    <button class="arrow right">&#10095;</button>
+  </div>
+
+
+<!-- text -->
+
+  <div class="text">
+    FIGMA'S <span class="emoji color-purple"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-burst.static.svg?v=34745811441670751621741296058" alt=""></span> COLLECTION 
+    <span class="emoji color-red"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-hourglass.static.svg?v=133626873782927219541741296058" alt=""></span> OF 
+    <span class="underline">LAYERS</span> 
+    <img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-zag.static.svg?v=102718930007740203771741296058" alt=""> AND 
+    <span class="emoji color-green"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-dots.static.svg?v=39142388321885661271741296058" alt=""></span> 
+    <span class="underline">COMPONENTS</span> 
+    <span class="emoji color-yellow"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-sun.static.svg?v=163357932534391307201741296058" alt=""></span> FOR <br>
+    <span class="">YOU</span> 
+    <span class="emoji color-blue"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-comet.static.svg?v=16892712658856357451741296058" alt=""></span> AND 
+    <span class="emoji color-yellow"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-snake.static.svg?v=34100567131936571961741296058" alt=""></span> 
+    <span class="">YOUR</span> 
+    <span class="emoji color-green"><img src="https://store.figma.com/cdn/shop/t/37/assets/word-symbol-tri.static.svg?v=32742515804419710851741296058" alt=""></span> 
+    <span class="">FRIENDS</span>
+    </div>
+
+
+<!-- card -->
+    <div class="promo-card">
+      <div class="promo-text">
+        <h2>FIGMA X WORK LOUDER</h2>
+        <p>Meet the limited edition Figma Creator Micro Keyboard</p>
+        <button class="preorder-btn">PREORDER</button>
+      </div>
+      <div class="promo-image">
+        <img src="https://www.stephaniefroehner.com/_astro/WorkLouder.e38cc33d_67RCQ.webp" alt="Figma Micro Keyboard" />
+        <span class="tag orange">JUST DROPPED</span>
+        <span class="tag yellow">NEW NEW</span>
+        <span class="tag purple">LIMITED EDITION</span>
+      </div>
+    </div>
+
+
+  <!-- Categories -->
+<section class="category-section" id="dynamic-categories">
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="logo-box">
+        <div class="green-box">
+          <p>THE<br>FIGMA<br>STORE</p>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <h2>OBJECTS<br>THAT INSPIRE.</h2>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Sale</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a href="#">FIGMA ↗</a>
+      <a href="#">TWITTER</a>
+      <a href="#">INSTAGRAM</a>
+      <a href="#">YOUTUBE</a>
+      <button class="scroll-top">⬆</button>
+    </div>
+
+    <div class="footer-marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        FIGMA’S ⏤ MARVELOUSLY ⚪ CONSIDERED ⚪ COLLECTION ⏳ OF ⚪ OBJECTS ⏳ FOR ⚪ OUR ⏤ TIME ⏤ ON ⏤ FIGMA’S ⏤ MARVELOUSLY ⚪
+      </marquee>
+    </div>
+  </footer>
+
+  <script>
+    function handleClick(category) {
+      localStorage.setItem('selectedCategory', category);
+      window.location.href = 'category.html?cat=' + category;
+    }
+  
+    function loadCategoriesFromJSON() {
+      fetch('products.json')
+        .then(res => res.json())
+        .then(data => {
+          let products = data.products[0];
+          let container = document.getElementById('dynamic-categories');
+          container.innerHTML = '';
+  
+          Object.entries(products).forEach(([categoryName, items]) => {
+            let image = items[0].thumbnail;
+  
+            let card = document.createElement('div');
+            card.className = 'category-card';
+            card.onclick = () => handleClick(categoryName.toLowerCase());
+            card.innerHTML = `
+              <div class="circle-image">
+                <img src="${image}" alt="${categoryName}" />
+              </div>
+              <p class="category-label">CATEGORY</p>
+              <h3>${categoryName.toUpperCase()}</h3>
+            `;
+            container.appendChild(card);
+          });
+        });
+    }
+  
+    // Auto-load categories on page load
+    if (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname.includes('index')) {
+      loadCategoriesFromJSON();
+    }
+
+    const track = document.getElementById('carouselTrack');
+    const leftBtn = document.querySelector('.arrow.left');
+    const rightBtn = document.querySelector('.arrow.right');
+    let index = 0;
+
+    leftBtn.addEventListener('click', () => {
+      index = (index <= 0) ? 2 : index - 1;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    rightBtn.addEventListener('click', () => {
+      index = (index >= 2) ? 0 : index + 1;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    #product-details {
+      display: flex;
+      margin: 50px auto;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    /* .product-image {
+      flex: 1;
+    } */
+
+    /* .product-image img {
+      width: 100%;
+      border-radius: 6px;
+    } */
+
+    .product-info {
+      flex: 2;
+    }
+
+    .product-info h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      margin: 10px ;
+    }
+
+    .size-select {
+      margin: 12px 0;
+    }
+
+    select {
+      padding: 8px 12px;
+      font-size: 1rem;
+    }
+
+    #buy-btn {
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #buy-btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+
+    .logo-box .green-box{
+      border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+    }
+
+  
+
+
+  
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><button>SHOP</button></a>
+      <button>ABOUT</button>
+      <span class="search-icon">🔍</span>
+    </div>
+    <h1>THE FIGMA STORE</h1>
+    <div class="nav-right">
+      <button>
+        <select name="country" id="country-select">
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <option value="IN">India</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="JP">Japan</option>
+          <option value="CN">China</option>
+          <option value="BR">Brazil</option>
+          <option value="ZA">South Africa</option>
+          <option value="IT">Italy</option>
+          <option value="ES">Spain</option>
+          <option value="MX">Mexico</option>
+          <option value="RU">Russia</option>
+        </select>
+      </button>
+      <button>CART 🛒 0</button>
+    </div>
+  </header>
+
+  <div id="product-details">Loading product...</div>
+
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="logo-box">
+        <div class="green-box">
+          <p>THE<br>FIGMA<br>STORE</p>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <h2>OBJECTS<br>THAT INSPIRE.</h2>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Sale</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a href="#">FIGMA ↗</a>
+      <a href="#">TWITTER</a>
+      <a href="#">INSTAGRAM</a>
+      <a href="#">YOUTUBE</a>
+      <button class="scroll-top">⬆</button>
+    </div>
+
+    <div class="footer-marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        FIGMA’S ⏤ MARVELOUSLY ⚪ CONSIDERED ⚪ COLLECTION ⏳ OF ⚪ OBJECTS ⏳ FOR ⚪ OUR ⏤ TIME ⏤ ON ⏤ FIGMA’S ⏤ MARVELOUSLY ⚪
+      </marquee>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
